@@ -1,0 +1,145 @@
+﻿<Window x:Class="Goncharov_Kursach.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Goncharov_Kursach"
+         mc:Ignorable="d"
+        Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border Background="#003C43" 
+            CornerRadius="30"
+            MouseDown="Border_MouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Отель" Foreground="White" FontFamily="#Poppins" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Button x:Name="btnExit"
+                    Height="64"
+                    Width="64"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Click="btnExit_Click"
+                    Margin="10"
+                    >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <ImageBrush ImageSource="/Assets/cross-circle.png"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/Assets/cross-circle_hovered.png"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="btnBooking" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,10,0,455" Content="Брони" FontFamily="#Poppins" Background="#9c6810" FontSize="17" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnBooking_status" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,10,0,455" Content="Статус брони" FontFamily="#Poppins" FontSize="17" Background="#9c6810" Foreground="White" BorderThickness="0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnClient" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,71,0,394" Content="Клиенты" FontFamily="#Poppins" FontSize="17" Background="#141c7a" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnInventory" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,131,0,334" Content="Инвентарь" FontFamily="#Poppins" FontSize="17" Background="#491c73" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnRequests" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,190,0,275" Content="Запросы" FontFamily="#Poppins" FontSize="17" Background="#820a16" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnReviews" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,251,0,214" Content="Отзывы" FontFamily="#Poppins" FontSize="17" Background="#1f6b03" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnRoom" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,311,0,154" Content="Номера" FontFamily="#Poppins" Background="#b59a04" FontSize="17" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnRoom_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,311,0,154" Content="Типы номера" FontFamily="#Poppins" FontSize="17" Background="#b59a04" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnStaff" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,371,0,94" Content="Персонал" FontFamily="#Poppins" FontSize="17" Background="#9c034f" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnService_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,431,0,34" Content="Типы услуг" FontFamily="#Poppins" FontSize="17" Background="#069e66" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnService" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,431,0,34" Content="Услуги" FontFamily="#Poppins" Background="#069e66" FontSize="17" Foreground="White" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Border>
+</Window>
