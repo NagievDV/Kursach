@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,17 +33,19 @@ namespace Goncharov_Kursach
 
             using (var db = new Entities())
             {
-                var user = db.Staffs.AsNoTracking().FirstOrDefault(u => u.login == tbLogin.Text && u.password == pbPassword.Password);
+                var user = db.Staff.AsNoTracking().FirstOrDefault(u => u.login == tbLogin.Text && u.password == pbPassword.Password);
                 if (user == null)
                 {
                     MessageBox.Show("Пользователь не найден!");
                     return;
+                } else
+                {
+                    MainWindow.isLogined = true;
                 }
                 if (user.role == "admin")
                 {
                     MainWindow.isAdmin = true;
                 }
-              
             }
         }
 
@@ -51,6 +54,8 @@ namespace Goncharov_Kursach
             tbLogin.Text = "";
             pbPassword.Password = "";
         }
+        
+
         
     }
 }

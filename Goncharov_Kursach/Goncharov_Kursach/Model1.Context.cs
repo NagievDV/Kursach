@@ -15,6 +15,16 @@ namespace Goncharov_Kursach
     
     public partial class Entities : DbContext
     {
+        private static Entities context;
+
+        public static Entities GetContext()
+        {
+            if (context == null)
+            {
+                context = new Entities();
+            }
+            return context;
+        }
         public Entities()
             : base("name=Entities")
         {
@@ -25,16 +35,17 @@ namespace Goncharov_Kursach
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Booking> Bookings { get; set; }
+        public virtual DbSet<Booking> Booking { get; set; }
         public virtual DbSet<Booking_status> Booking_status { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Remaining_inventory> Remaining_inventory { get; set; }
-        public virtual DbSet<Request> Requests { get; set; }
-        public virtual DbSet<Review> Reviews { get; set; }
-        public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<Requests> Requests { get; set; }
+        public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<Room> Room { get; set; }
         public virtual DbSet<Room_type> Room_type { get; set; }
         public virtual DbSet<Service_type> Service_type { get; set; }
-        public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<Services> Services { get; set; }
+        public virtual DbSet<Staff> Staff { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

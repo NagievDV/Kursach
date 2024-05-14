@@ -13,7 +13,8 @@
 
     <Border Background="#003C43" 
             CornerRadius="30"
-            MouseDown="Border_MouseDown">
+            MouseDown="Border_MouseDown"
+            MouseMove="Border_MouseMove">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
@@ -63,77 +64,77 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button x:Name="btnBooking" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,10,0,455" Content="Брони" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0" Click="btnBooking_Click">
+            <Button IsEnabled="False" x:Name="btnBooking" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,10,0,455" Content="Брони" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0" Visibility="Hidden" Click="btnBooking_Click" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnBooking_status" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,10,0,455" Content="Статус брони" FontFamily="#Poppins" FontSize="17" Background="#069e66" Foreground="White" BorderThickness="0" >
+            <Button IsEnabled="False" x:Name="btnBooking_status" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,10,0,455" Content="Статус брони" FontFamily="#Poppins" FontSize="17" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnClient" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,71,0,394" Content="Клиенты" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnClient" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,71,0,394" Content="Клиенты" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnInventory" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,131,0,334" Content="Инвентарь" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnInventory" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,131,0,334" Content="Инвентарь" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnRequests" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,190,0,275" Content="Запросы" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnRequests" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,190,0,275" Content="Запросы" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnReviews" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,251,0,214" Content="Отзывы" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnReviews" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,251,0,214" Content="Отзывы" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnRoom" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,311,0,154" Content="Номера" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnRoom" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,311,0,154" Content="Номера" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnRoom_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,311,0,154" Content="Типы номера" FontFamily="#Poppins" FontSize="17" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnRoom_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,311,0,154" Content="Типы номера" FontFamily="#Poppins" FontSize="17" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnStaff" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,371,0,94" Content="Персонал" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnStaff" Grid.Row="1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,371,0,94" Content="Персонал" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnService_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,431,0,34" Content="Типы услуг" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnService_type" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="130,431,0,34" Content="Типы услуг" FontFamily="#Poppins" FontSize="20" Background="#069e66" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="btnService" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,431,0,34" Content="Услуги" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0">
+            <Button IsEnabled="False" x:Name="btnService" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,431,0,34" Content="Услуги" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" Visibility="Hidden" BorderThickness="0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>

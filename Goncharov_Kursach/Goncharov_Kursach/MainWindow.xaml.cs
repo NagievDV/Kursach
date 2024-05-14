@@ -21,6 +21,8 @@ namespace Goncharov_Kursach
     public partial class MainWindow : Window
     {
         public static bool isAdmin = false;
+        public static bool isLogined = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,38 +38,32 @@ namespace Goncharov_Kursach
             {
                 DragMove();
             }
-            AlterButtonsState();
         }
-        public void AlterButtonsState()
+        public void EnableButtons()
         {
-            if (btnBooking.IsEnabled == true)
-            {
-                btnBooking.IsEnabled = false;
-                btnBooking_status.IsEnabled = false;
-                btnClient.IsEnabled = false;
-                btnInventory.IsEnabled = false;
-                btnRequests.IsEnabled = false;
-                btnReviews.IsEnabled = false;
-                btnRoom.IsEnabled = false;
-                btnRoom_type.IsEnabled = false;
-                btnService.IsEnabled = false;
-                btnService_type.IsEnabled = false;
-                btnStaff.IsEnabled = false;
-            }
-            else
-            {
-                btnBooking.IsEnabled = true;
-                btnBooking_status.IsEnabled = true;
-                btnClient.IsEnabled = true;
-                btnInventory.IsEnabled = true;
-                btnRequests.IsEnabled = true;
-                btnReviews.IsEnabled = true;
-                btnRoom.IsEnabled = true;
-                btnRoom_type.IsEnabled = true;
-                btnService.IsEnabled = true;
-                btnService_type.IsEnabled = true;
-                btnStaff.IsEnabled = true;
-            }
+
+            btnBooking.Visibility = Visibility.Visible;
+            btnBooking.IsEnabled = true;
+            btnBooking_status.Visibility = Visibility.Visible;
+            btnBooking_status.IsEnabled = true;
+            btnClient.Visibility = Visibility.Visible;
+            btnClient.IsEnabled = true;
+            btnInventory.Visibility = Visibility.Visible;
+            btnInventory.IsEnabled = true;
+            btnRequests.Visibility = Visibility.Visible;
+            btnRequests.IsEnabled = true;
+            btnReviews.Visibility = Visibility.Visible;
+            btnReviews.IsEnabled = true;
+            btnRoom.Visibility = Visibility.Visible;
+            btnRoom.IsEnabled = true;
+            btnRoom_type.Visibility = Visibility.Visible;
+            btnRoom_type.IsEnabled = true;
+            btnService.Visibility = Visibility.Visible;
+            btnService.IsEnabled = true;
+            btnService_type.Visibility = Visibility.Visible;
+            btnService_type.IsEnabled = true;
+            btnStaff.Visibility = Visibility.Visible;
+            btnStaff.IsEnabled = true;
         }
 
         private void btnBooking_Click(object sender, RoutedEventArgs e)
@@ -75,5 +71,9 @@ namespace Goncharov_Kursach
            MainFrame.NavigationService.Navigate(new Bookings());
         }
 
+        private void Border_MouseMove(object sender, MouseEventArgs e)
+        {
+                if (isLogined == true) EnableButtons();      
+        }
     }
 }
