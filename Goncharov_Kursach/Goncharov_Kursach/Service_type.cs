@@ -17,7 +17,7 @@ namespace Goncharov_Kursach
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Service_type()
         {
-            this.Services = new HashSet<Services>();
+            this.Services = new HashSet<Service>();
         }
     
         public int id { get; set; }
@@ -26,6 +26,6 @@ namespace Goncharov_Kursach
         public bool on_sale { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Services> Services { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

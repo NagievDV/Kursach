@@ -63,7 +63,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button x:Name="btnBooking" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,10,0,455" Content="Брони" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0">
+            <Button x:Name="btnBooking" Grid.Row="1" Height="50" Width="120" HorizontalAlignment="Left" Margin="0,10,0,455" Content="Брони" FontFamily="#Poppins" Background="#069e66" FontSize="20" Foreground="White" BorderThickness="0" Click="btnBooking_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

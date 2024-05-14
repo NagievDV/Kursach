@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9559367d3be6444291856ebcff1feb84" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="8220fb5c56f64c0fa1884733bad18c5e" Name="Diagram1">
         <EntityTypeShape EntityType="Model.Booking" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Booking_status" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Remaining_inventory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Requests" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Reviews" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Request" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Review" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Room" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Room_type" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Service_type" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Services" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Staff" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_Booking_Booking_status" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Booking_Client" ManuallyRouted="false" />

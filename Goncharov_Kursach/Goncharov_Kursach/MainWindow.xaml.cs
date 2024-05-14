@@ -20,6 +20,7 @@ namespace Goncharov_Kursach
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static bool isAdmin = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +36,44 @@ namespace Goncharov_Kursach
             {
                 DragMove();
             }
+            AlterButtonsState();
         }
+        public void AlterButtonsState()
+        {
+            if (btnBooking.IsEnabled == true)
+            {
+                btnBooking.IsEnabled = false;
+                btnBooking_status.IsEnabled = false;
+                btnClient.IsEnabled = false;
+                btnInventory.IsEnabled = false;
+                btnRequests.IsEnabled = false;
+                btnReviews.IsEnabled = false;
+                btnRoom.IsEnabled = false;
+                btnRoom_type.IsEnabled = false;
+                btnService.IsEnabled = false;
+                btnService_type.IsEnabled = false;
+                btnStaff.IsEnabled = false;
+            }
+            else
+            {
+                btnBooking.IsEnabled = true;
+                btnBooking_status.IsEnabled = true;
+                btnClient.IsEnabled = true;
+                btnInventory.IsEnabled = true;
+                btnRequests.IsEnabled = true;
+                btnReviews.IsEnabled = true;
+                btnRoom.IsEnabled = true;
+                btnRoom_type.IsEnabled = true;
+                btnService.IsEnabled = true;
+                btnService_type.IsEnabled = true;
+                btnStaff.IsEnabled = true;
+            }
+        }
+
+        private void btnBooking_Click(object sender, RoutedEventArgs e)
+        {
+           MainFrame.NavigationService.Navigate(new Bookings());
+        }
+
     }
 }

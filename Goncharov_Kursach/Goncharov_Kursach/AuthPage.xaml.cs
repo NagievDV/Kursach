@@ -23,11 +23,34 @@ namespace Goncharov_Kursach
         public AuthPage()
         {
             InitializeComponent();
+
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(tbLogin.Text) || string.IsNullOrEmpty(pbPassword.Password)) MessageBox.Show("Введите логин и пароль!");
 
+            using (var db = new Entities())
+            {
+                var user = db.Staffs.AsNoTracking().FirstOrDefault(u => u.login == tbLogin.Text && u.password == pbPassword.Password);
+                if (user == null)
+                {
+                    MessageBox.Show("Пользователь не найден!");
+                    return;
+                }
+                if (user.role == "admin")
+                {
+                    MainWindow.isAdmin = true;
+                }
+              
+            }
         }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            tbLogin.Text = "";
+            pbPassword.Password = "";
+        }
+        
     }
 }

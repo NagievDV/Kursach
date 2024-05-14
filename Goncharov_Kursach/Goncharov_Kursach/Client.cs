@@ -17,10 +17,10 @@ namespace Goncharov_Kursach
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
         {
-            this.Booking = new HashSet<Booking>();
-            this.Requests = new HashSet<Requests>();
-            this.Reviews = new HashSet<Reviews>();
-            this.Services = new HashSet<Services>();
+            this.Bookings = new HashSet<Booking>();
+            this.Requests = new HashSet<Request>();
+            this.Reviews = new HashSet<Review>();
+            this.Services = new HashSet<Service>();
         }
     
         public int id { get; set; }
@@ -32,12 +32,12 @@ namespace Goncharov_Kursach
         public string payment_account { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Booking> Booking { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Requests> Requests { get; set; }
+        public virtual ICollection<Request> Requests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Reviews> Reviews { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Services> Services { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

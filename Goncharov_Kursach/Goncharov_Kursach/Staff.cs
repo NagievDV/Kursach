@@ -17,8 +17,8 @@ namespace Goncharov_Kursach
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Staff()
         {
-            this.Booking = new HashSet<Booking>();
-            this.Services = new HashSet<Services>();
+            this.Bookings = new HashSet<Booking>();
+            this.Services = new HashSet<Service>();
         }
     
         public int id { get; set; }
@@ -35,8 +35,8 @@ namespace Goncharov_Kursach
         public string role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Booking> Booking { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Services> Services { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
     }
 }

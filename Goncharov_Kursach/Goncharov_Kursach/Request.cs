@@ -12,7 +12,7 @@ namespace Goncharov_Kursach
     using System;
     using System.Collections.Generic;
     
-    public partial class Requests
+    public partial class Request
     {
         public int id { get; set; }
         public int client { get; set; }
