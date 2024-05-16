@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,11 @@ namespace Goncharov_Kursach
     /// </summary>
     public partial class Bookings : Page
     {
+        private bool isAddBtnPressed = false;
         public Bookings()
         {
             InitializeComponent();
+            dGridBookings.CanUserAddRows = false;
             var context = Entities.GetContext();
             var query = from Booking in context.Booking
                         join Staff in context.Staff on Booking.responsible equals Staff.id
@@ -51,17 +54,21 @@ namespace Goncharov_Kursach
             }
 
         }
+
+
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-                dGridBookings.ItemsSource = Entities.GetContext().Booking.ToList();
-
-                btnEdit.Visibility = Visibility.Hidden;
-                btnReturnFromEdit.Visibility = Visibility.Visible;
-                dGridBookings.IsReadOnly = false;
-                btnDelete.Visibility = Visibility.Visible;
-                btnDelete.IsEnabled = true;
-                btnSave.Visibility = Visibility.Visible;
-                btnSave.IsEnabled = true;
+            dGridBookings.UnselectAll();
+            dGridBookings.ItemsSource = Entities.GetContext().Booking.ToList();
+            btnEdit.Visibility = Visibility.Hidden;
+            btnReturnFromEdit.Visibility = Visibility.Visible;
+            dGridBookings.IsReadOnly = false;
+            btnDelete.Visibility = Visibility.Visible;
+            btnDelete.IsEnabled = true;
+            btnSave.Visibility = Visibility.Visible;
+            btnSave.IsEnabled = true;
+            btnAdd.Visibility = Visibility.Visible;
+            btnAdd.IsEnabled = true;
                 
         }
 
@@ -96,30 +103,74 @@ namespace Goncharov_Kursach
             btnSave.Visibility = Visibility.Hidden;
             btnSave.IsEnabled = false;
             dGridBookings.IsReadOnly = true;
-
             btnEdit.Visibility = Visibility.Visible;
             btnReturnFromEdit.Visibility = Visibility.Hidden;
-            dGridBookings.IsReadOnly = true;
-            btnDelete.Visibility = Visibility.Hidden;
-            btnDelete.IsEnabled = false;
-            btnSave.Visibility = Visibility.Hidden;
-            btnSave.IsEnabled = false;
+            dGridBookings.CanUserAddRows = false;
+            btnAdd.Visibility = Visibility.Hidden;
+            btnAdd.IsEnabled = false;
 
 
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            var a = dGridBookings.SelectedItems.Cast<Booking>().ToList();
-            Entities.GetContext().Booking.AddRange(a);
-            Entities.GetContext().SaveChanges();
+
+            try
+            {
+                dGridBookings.CanUserAddRows = false;
+                dGridBookings.UnselectAll();
+                Entities.GetContext().SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
+
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var a = dGridBookings.SelectedItems.Cast<Booking>().ToList();
-            Entities.GetContext().Booking.RemoveRange(a);
-            Entities.GetContext().SaveChanges();
+            try
+            {
+                var a = dGridBookings.SelectedItems.Cast<Booking>().ToList();
+                Entities.GetContext().Booking.RemoveRange(a);
+                Entities.GetContext().SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+            try {
+                if (isAddBtnPressed)
+                {
+                    var a = dGridBookings.SelectedItems.Cast<Booking>().ToList();
+                    Entities.GetContext().Booking.AddRange(a);
+                    Entities.GetContext().SaveChanges();
+                    dGridBookings.UnselectAll();
+                    btnSave.Visibility = Visibility.Visible;
+                    btnSave.IsEnabled = true;
+                    isAddBtnPressed = !isAddBtnPressed;
+                }
+                else
+                {
+                    btnSave.Visibility = Visibility.Hidden;
+                    dGridBookings.CanUserAddRows = true;
+                    var a = dGridBookings.SelectedItems.Cast<Booking>().ToList();
+                    Entities.GetContext().Booking.AddRange(a);
+                    Entities.GetContext().SaveChanges();
+                    dGridBookings.UnselectAll();
+                    isAddBtnPressed = !isAddBtnPressed;
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

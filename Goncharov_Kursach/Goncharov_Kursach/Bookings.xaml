@@ -61,7 +61,7 @@
         
         <Button x:Name="btnSave"
             Height="50"
-            Margin="270,20,220,20"
+            Margin="180,20,347,20"
             Background="#069e66"
             Content="Сохранить"
             Foreground="White"
@@ -69,6 +69,18 @@
             FontSize="20"
             BorderThickness="0" 
             Click="btnSave_Click" 
+            Grid.Row="1"
+            Visibility="Hidden"/>
+        <Button x:Name="btnAdd"
+            Height="50"
+            Margin="346,20,180,20"
+            Background="#069e66"
+            Content="Добавить"
+            Foreground="White"
+            FontFamily="#Poppins"
+            FontSize="20"
+            BorderThickness="0" 
+            Click="btnAdd_Click" 
             Grid.Row="1"
             Visibility="Hidden"/>
     </Grid>

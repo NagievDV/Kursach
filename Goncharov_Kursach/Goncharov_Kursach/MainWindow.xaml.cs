@@ -20,8 +20,8 @@ namespace Goncharov_Kursach
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static bool isAdmin = false;
-        public static bool isLogined = false;
+        public static bool isAdmin = true;
+        public static bool isLogined = true;
 
         public MainWindow()
         {
