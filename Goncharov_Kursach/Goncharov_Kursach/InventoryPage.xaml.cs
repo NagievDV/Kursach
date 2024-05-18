@@ -34,7 +34,7 @@ namespace Goncharov_Kursach
                         select new
                         {
                             Id = Inventory.id,
-                            Наименовая = Inventory.inventory_item,
+                            Наименование = Inventory.inventory_item,
                             Количество = Inventory.amount
 
                         };

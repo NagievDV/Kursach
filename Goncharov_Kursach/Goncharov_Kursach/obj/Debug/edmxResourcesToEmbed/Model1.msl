@@ -62,6 +62,8 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="client" ColumnName="client" />
           <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

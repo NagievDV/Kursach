@@ -19,7 +19,6 @@ namespace Goncharov_Kursach
         {
             this.Booking = new HashSet<Booking>();
             this.Requests = new HashSet<Requests>();
-            this.Reviews = new HashSet<Reviews>();
             this.Services = new HashSet<Services>();
         }
     
@@ -35,8 +34,6 @@ namespace Goncharov_Kursach
         public virtual ICollection<Booking> Booking { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Requests> Requests { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Reviews> Reviews { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Services> Services { get; set; }
     }

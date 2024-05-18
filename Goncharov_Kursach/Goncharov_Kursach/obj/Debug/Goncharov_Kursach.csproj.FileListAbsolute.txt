@@ -84,3 +84,15 @@ C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Inv
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\InventoryPage.baml
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RequestsPage.g.cs
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RequestsPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ReviewsPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ReviewsPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RoomsPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RoomsPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RoomTypePage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RoomTypePage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\StaffPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\StaffPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ServicesPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ServicesPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ServiceTypePage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ServiceTypePage.baml

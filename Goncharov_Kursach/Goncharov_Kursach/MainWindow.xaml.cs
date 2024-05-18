@@ -96,5 +96,35 @@ namespace Goncharov_Kursach
         {
             MainFrame.NavigationService.Navigate(new RequestsPage());
         }
+
+        private void btnReviews_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ReviewsPage());
+        }
+
+        private void btnRoom_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new RoomsPage());
+        }
+
+        private void btnRoom_type_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new RoomTypePage());
+        }
+
+        private void btnStaff_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new StaffPage());
+        }
+
+        private void btnService_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ServicesPage());
+        }
+
+        private void btnService_type_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ServiceTypePage());
+        }
     }
 }

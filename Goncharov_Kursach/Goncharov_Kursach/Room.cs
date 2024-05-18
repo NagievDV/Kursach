@@ -23,7 +23,7 @@ namespace Goncharov_Kursach
         public int id { get; set; }
         public int room_type { get; set; }
         public Nullable<int> beds_count { get; set; }
-        public Nullable<bool> has_bathroom { get; set; }
+        public bool has_bathroom { get; set; }
         public Nullable<decimal> area { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

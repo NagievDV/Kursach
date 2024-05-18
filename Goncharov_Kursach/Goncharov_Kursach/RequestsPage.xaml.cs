@@ -22,7 +22,7 @@ namespace Goncharov_Kursach
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.lblText.Content = "Брони";
+                    mainWindow.lblText.Content = "Запросы";
                 }
                 InitializeComponent();
                 dGridRequests.CanUserAddRows = false;

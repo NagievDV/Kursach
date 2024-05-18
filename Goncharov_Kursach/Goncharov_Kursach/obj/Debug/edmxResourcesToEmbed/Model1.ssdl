@@ -57,6 +57,8 @@
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="client" Type="int" Nullable="false" />
     <Property Name="text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="rating" Type="int" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -65,7 +67,7 @@
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="room_type" Type="int" Nullable="false" />
     <Property Name="beds_count" Type="int" />
-    <Property Name="has_bathroom" Type="bit" />
+    <Property Name="has_bathroom" Type="bit" Nullable="false" />
     <Property Name="area" Type="decimal" Precision="6" Scale="2" />
   </EntityType>
   <EntityType Name="Room_type">
@@ -180,18 +182,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Reviews_Client">
-    <End Role="Client" Type="Self.Client" Multiplicity="1" />
-    <End Role="Reviews" Type="Self.Reviews" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Client">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Reviews">
-        <PropertyRef Name="client" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Room_Room_type">
     <End Role="Room_type" Type="Self.Room_type" Multiplicity="1" />
     <End Role="Room" Type="Self.Room" Multiplicity="*" />
@@ -272,10 +262,6 @@
     <AssociationSet Name="FK_Requests_Client" Association="Self.FK_Requests_Client">
       <End Role="Client" EntitySet="Client" />
       <End Role="Requests" EntitySet="Requests" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Reviews_Client" Association="Self.FK_Reviews_Client">
-      <End Role="Client" EntitySet="Client" />
-      <End Role="Reviews" EntitySet="Reviews" />
     </AssociationSet>
     <AssociationSet Name="FK_Room_Room_type" Association="Self.FK_Room_Room_type">
       <End Role="Room_type" EntitySet="Room_type" />
