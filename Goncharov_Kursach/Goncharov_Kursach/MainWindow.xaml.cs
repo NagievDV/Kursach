@@ -20,6 +20,7 @@ namespace Goncharov_Kursach
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public static bool isAdmin = true;
         public static bool isLogined = true;
 
@@ -74,6 +75,26 @@ namespace Goncharov_Kursach
         private void Border_MouseMove(object sender, MouseEventArgs e)
         {
                 if (isLogined == true) EnableButtons();      
+        }
+
+        private void btnBooking_status_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Booking_statuses());
+        }
+
+        private void btnClient_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new ClientsPage());
+        }
+
+        private void btnInventory_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new InventoryPage());
+        }
+
+        private void btnRequests_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new RequestsPage());
         }
     }
 }

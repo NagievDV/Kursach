@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\App.xaml
-3-355024496
+7-700067195
 2-1957146511
-23291053210
+27-1829630331
 18-1956469323
-AuthPage.xaml;Bookings.xaml;MainWindow.xaml;
+AuthPage.xaml;Bookings.xaml;Booking_statuses.xaml;ClientsPage.xaml;InventoryPage.xaml;MainWindow.xaml;RequestsPage.xaml;
 
-False
+True
 

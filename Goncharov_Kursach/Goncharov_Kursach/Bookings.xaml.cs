@@ -24,6 +24,10 @@ namespace Goncharov_Kursach
         private bool isAddBtnPressed = false;
         public Bookings()
         {
+            if (Application.Current.MainWindow is MainWindow mainWindow)
+            {
+                mainWindow.lblText.Content = "Брони";
+            }
             InitializeComponent();
             dGridBookings.CanUserAddRows = false;
             var context = Entities.GetContext();

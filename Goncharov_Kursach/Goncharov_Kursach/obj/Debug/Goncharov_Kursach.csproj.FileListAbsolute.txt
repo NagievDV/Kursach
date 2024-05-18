@@ -76,3 +76,11 @@ C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Gon
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Goncharov_Kursach.csproj.CopyComplete
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Goncharov_Kursach.exe
 C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Goncharov_Kursach.pdb
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Booking_statuses.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\Booking_statuses.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ClientsPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\ClientsPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\InventoryPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\InventoryPage.baml
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RequestsPage.g.cs
+C:\Users\gdmit\Desktop\Kursach\Goncharov_Kursach\Goncharov_Kursach\obj\Debug\RequestsPage.baml
