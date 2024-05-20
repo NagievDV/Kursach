@@ -46,6 +46,5 @@ namespace Goncharov_Kursach
         public virtual DbSet<Service_type> Service_type { get; set; }
         public virtual DbSet<Services> Services { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

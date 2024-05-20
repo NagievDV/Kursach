@@ -67,7 +67,7 @@
     <Property Name="id" Type="int" Nullable="false" />
     <Property Name="room_type" Type="int" Nullable="false" />
     <Property Name="beds_count" Type="int" />
-    <Property Name="has_bathroom" Type="bit" Nullable="false" />
+    <Property Name="has_bathroom" Type="bit" />
     <Property Name="area" Type="decimal" Precision="6" Scale="2" />
   </EntityType>
   <EntityType Name="Room_type">
@@ -111,16 +111,6 @@
     <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="role" Type="nvarchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK_Booking_Booking_status">
     <End Role="Booking_status" Type="Self.Booking_status" Multiplicity="1" />
@@ -178,6 +168,18 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Requests">
+        <PropertyRef Name="client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reviews_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Reviews" Type="Self.Reviews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reviews">
         <PropertyRef Name="client" />
       </Dependent>
     </ReferentialConstraint>
@@ -242,7 +244,6 @@
     <EntitySet Name="Service_type" EntityType="Self.Service_type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Booking_Booking_status" Association="Self.FK_Booking_Booking_status">
       <End Role="Booking_status" EntitySet="Booking_status" />
       <End Role="Booking" EntitySet="Booking" />
@@ -262,6 +263,10 @@
     <AssociationSet Name="FK_Requests_Client" Association="Self.FK_Requests_Client">
       <End Role="Client" EntitySet="Client" />
       <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reviews_Client" Association="Self.FK_Reviews_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Reviews" EntitySet="Reviews" />
     </AssociationSet>
     <AssociationSet Name="FK_Room_Room_type" Association="Self.FK_Room_Room_type">
       <End Role="Room_type" EntitySet="Room_type" />

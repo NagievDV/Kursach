@@ -19,5 +19,7 @@ namespace Goncharov_Kursach
         public string text { get; set; }
         public Nullable<System.DateTime> date { get; set; }
         public Nullable<int> rating { get; set; }
+    
+        public virtual Client Client1 { get; set; }
     }
 }

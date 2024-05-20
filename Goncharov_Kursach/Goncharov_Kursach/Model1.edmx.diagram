@@ -4,24 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="688e9d197927457ea3e354efe9d7ad55" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Booking" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Booking_status" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+      <Diagram DiagramId="2fb3d403b248444ba3be17d14291ee9b" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Booking" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Booking_status" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Client" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Remaining_inventory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Requests" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Reviews" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Room" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Room_type" Width="1.5" PointX="1.5" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Service_type" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Services" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Staff" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Requests" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Reviews" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Room" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Room_type" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Service_type" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Services" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Staff" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_Booking_Booking_status" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Booking_Client" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Booking_Room" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Booking_Staff" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Requests_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Reviews_Client" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Services_Client" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Room_Room_type" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Services_Service_type" ManuallyRouted="false" />
