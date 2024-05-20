@@ -72,6 +72,7 @@
                     </Style>
                 </Button.Style>
             </Button>
+
             <Button IsEnabled="False"
                     x:Name="btnBooking"
                     Grid.Row="1" 
@@ -311,6 +312,63 @@
                    Source="AuthPage.xaml"
                    NavigationUIVisibility="Hidden">
             </Frame>
+            <Button IsEnabled="False" 
+                x:Name="btnReport1"
+                Width="181" 
+                HorizontalAlignment="Left" 
+                Margin="15,17,0,17" 
+                Content="Отзывы за период" 
+                FontFamily="#Poppins"
+                FontSize="20" 
+                Background="#069e66"
+                Foreground="White"
+                Visibility="Hidden"
+                BorderThickness="0" 
+                Click="btnReport1_Click" Grid.Column="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button IsEnabled="False" 
+                x:Name="btnReport2"
+                Width="180" 
+                HorizontalAlignment="Left" 
+                Margin="206,17,0,16" 
+                Content="Остаток инвентаря" 
+                FontFamily="#Poppins"
+                FontSize="20" 
+                Background="#069e66"
+                Foreground="White"
+                Visibility="Hidden"
+                BorderThickness="0" 
+                Click="btnReport2_Click" Grid.Column="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button IsEnabled="False" 
+                x:Name="btnReport3"
+                Width="181" 
+                HorizontalAlignment="Left" 
+                Margin="396,17,0,16" 
+                Content="Брони за период" 
+                FontFamily="#Poppins"
+                FontSize="20" 
+                Background="#069e66"
+                Foreground="White"
+                Visibility="Hidden"
+                BorderThickness="0" 
+                Click="btnReport3_Click" Grid.Column="1">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
         </Grid>
     </Border>

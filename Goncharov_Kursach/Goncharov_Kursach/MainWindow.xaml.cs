@@ -65,16 +65,22 @@ namespace Goncharov_Kursach
             btnService_type.IsEnabled = true;
             btnStaff.Visibility = Visibility.Visible;
             btnStaff.IsEnabled = true;
+            btnReport1.Visibility = Visibility.Visible;
+            btnReport1.IsEnabled = true;
+            btnReport2.Visibility = Visibility.Visible;
+            btnReport2.IsEnabled = true;
+            btnReport3.Visibility = Visibility.Visible;
+            btnReport3.IsEnabled = true;
+        }
+
+        private void Border_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isLogined == true) EnableButtons();
         }
 
         private void btnBooking_Click(object sender, RoutedEventArgs e)
         {
            MainFrame.NavigationService.Navigate(new Bookings());
-        }
-
-        private void Border_MouseMove(object sender, MouseEventArgs e)
-        {
-                if (isLogined == true) EnableButtons();      
         }
 
         private void btnBooking_status_Click(object sender, RoutedEventArgs e)
@@ -125,6 +131,21 @@ namespace Goncharov_Kursach
         private void btnService_type_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.NavigationService.Navigate(new ServiceTypePage());
+        }
+
+        private void btnReport1_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Report1Page());
+        }
+
+        private void btnReport2_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Report2Page());
+        }
+
+        private void btnReport3_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Report3Page());
         }
     }
 }
